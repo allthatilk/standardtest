@@ -55,7 +55,6 @@ coverage.xml
 *.log
 .static_storage/
 .media/
-dev.py
 local_settings.py
 local.py
 migrations/
