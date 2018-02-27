@@ -3,3 +3,4 @@ wagtail>=1.13,<1.14
 psycopg2-binary==2.7.4
 pyIATI==0.3.0
 lxml==4.1.1
+django_heroku==0.2.0
