@@ -9,6 +9,8 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
         <xsl:apply-templates select="xsd:schema" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
       </body>
     </html>
+    {% block content %}
+    {% endblock %}
   </xsl:template>
 
   <!-- This xsl:output tag is not currently used due to DOCTYPE and indent limitations but may be useful in the future if the kinks are ironed out -->
@@ -35,7 +37,15 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
       </xsl:attribute>
       <h1><xsl:value-of select="@ref|@name"/></h1>
       <h3>Definition</h3>
-      <p><xsl:value-of select="key('elemref', @ref)/xsd:annotation/xsd:documentation|xsd:annotation/xsd:documentation"/></p>
+      <pre>
+        <xsl:value-of select="key('elemref', @ref)/xsd:annotation/xsd:documentation|xsd:annotation/xsd:documentation"/>
+      </pre>
+      <h3>Example</h3>
+      <pre>
+        <code>
+          Cats!
+        </code>
+      </pre>
       <h3>Occurance</h3>
       <p>Minimum number of times this element can occur:
         <xsl:choose>
@@ -69,7 +79,9 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                                        <xsl:value-of select="'optional'"/>
                                      </xsl:otherwise>
                                    </xsl:choose></p>
-              <p><xsl:value-of select="key('attref', @ref)/xsd:annotation/xsd:documentation|xsd:annotation/xsd:documentation"/></p>
+              <pre>
+                <xsl:value-of select="key('attref', @ref)/xsd:annotation/xsd:documentation|xsd:annotation/xsd:documentation"/>
+              </pre>
           </li>
         </ul>
       </xsl:for-each>
