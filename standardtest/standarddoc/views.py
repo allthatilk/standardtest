@@ -33,5 +33,5 @@ class XSLTTransformation(object):
 
 
 def iati_activities(request):
-    """Render the index page."""
+    """Render the iati_activities page."""
     return render(request, 'standarddoc/iati-activities.html', {})
