@@ -5,7 +5,7 @@ from django.db import models
 from wagtail.wagtailcore.models import Page
 from wagtail.wagtailcore.fields import RichTextField
 from wagtail.wagtailadmin.edit_handlers import FieldPanel
-from standarddoc import views
+from standarddoc import models
 
 
 class HomePage(Page):
@@ -17,7 +17,7 @@ class HomePage(Page):
 
 
 class StandardPage(Page):
-    xslt_transformation = views.XSLTTransformation()
+    xslt_transformation = models.XSLTTransformationPage()
     autogen = xslt_transformation.transform_XSD_to_HTML()
     example_code = RichTextField(blank=True)
 
