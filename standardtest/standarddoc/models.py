@@ -25,7 +25,7 @@ class XSLTTransformationPage(object):
         html_tree = transform(activity_schema_full)
         # The write method is used as the write_output method that uses the xsl:output tag doesn't provide correct indenting or DOCTYPE format.
         html_tree.write(
-            'standardtest/templates/iati-activities.html',
+            'iati-activities.html',
             doctype='<!DOCTYPE html>',
             encoding='UTF-8',
             pretty_print=True
