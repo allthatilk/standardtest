@@ -7,7 +7,7 @@ from standardtest.settings import base
 
 class XSLTTransformationPage(object):
 
-    XSL_FILE = os.path.join(base.PROJECT_DIR, 'static', 'iati_activities.xsl')
+    XSL_FILE = os.path.join(base.BASE_DIR, 'standarddoc', 'static', 'iati_activities.xsl')
 
     def create_full_activity_schema_etree(self):
         """Create an IATI schema with arelevant content from the common schema included."""
