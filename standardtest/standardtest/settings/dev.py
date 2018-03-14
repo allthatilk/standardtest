@@ -9,9 +9,7 @@ DEBUG = True
 
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-ALLOWED_HOSTS = [
-    '165.227.88.31',
-]
+ALLOWED_HOSTS = ['165.227.88.31']
 
 
 try:
