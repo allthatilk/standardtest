@@ -1,7 +1,6 @@
 from django.db import models
 import iati
 from lxml import etree
-from utilities import helpers
 
 
 class XSLTTransformationPage(object):
